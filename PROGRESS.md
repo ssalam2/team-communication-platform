@@ -16,7 +16,7 @@
 - [x] PLANNING.md created
 - [x] PROGRESS.md created
 - [ ] Repo initialized and pushed to GitHub
-- [ ] Solution scaffolded via Claude Code
+- [x] Solution scaffolded via Claude Code
 
 ---
 
@@ -24,7 +24,7 @@
 - [ ] Solution builds cleanly
 - [ ] Desktop app shell runs
 - [ ] EF Core + PostgreSQL connected
-- [ ] User entity and DbContext created
+- [x] User entity and DbContext created
 - [ ] First migration applied
 - [ ] POST /api/auth/register working
 - [ ] POST /api/auth/login returns JWT
