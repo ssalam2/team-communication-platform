@@ -19,6 +19,7 @@ packages/
 project.lock.json
 
 # Secrets & environment-specific config
+appsettings.json
 appsettings.Development.json
 appsettings.Production.json
 appsettings.*.local.json
