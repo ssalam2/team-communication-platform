@@ -249,7 +249,7 @@ cd ../..
 - [x] Data model designed
 - [x] API structure designed
 - [x] Solution structure defined
-- [ ] Day 1 — Foundation & Auth
+- [x] Day 1 — Foundation & Auth *(auth endpoints implemented; first migration + Postman verification pending)*
 - [ ] Day 2 — Workspaces & Channels
 - [ ] Day 3 — Real-Time Messaging
 - [ ] Day 4 — Threads + Redis Presence
