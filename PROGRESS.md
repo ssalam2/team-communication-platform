@@ -21,17 +21,12 @@
 ---
 
 ## Day 1 — Foundation & Auth
-- [ ] Solution builds cleanly *(pending — first migration must be applied before a clean run)*
-- [x] Desktop app shell scaffolded (MAUI Blazor Hybrid — stub UI only)
-- [x] EF Core + PostgreSQL configured (AppDbContext, connection string, Npgsql)
-- [x] User entity and DbContext created
-- [x] Auth DTOs created (RegisterRequest, LoginRequest, AuthResponse in CollabPlatform.Shared)
-- [x] WorkspaceRole enum created (CollabPlatform.Shared)
-- [x] IAuthService interface + AuthService implemented (BCrypt hashing, JWT generation)
-- [x] POST /api/auth/register implemented
-- [x] POST /api/auth/login implemented
-- [x] JWT auth middleware wired in Program.cs (issuer, audience, lifetime, signing key)
-- [x] OpenAPI configured (.NET 10 built-in — serves `/openapi/v1.json` in dev)
+- [ ] Solution builds cleanly
+- [x] Desktop app shell scaffolded (MAUI Blazor Hybrid)
+- [x] EF Core + PostgreSQL configured
+- [x] User entity + AppDbContext created
+- [x] Auth DTOs + WorkspaceRole enum (CollabPlatform.Shared)
+- [x] AuthService (BCrypt + JWT) + both auth endpoints implemented
 - [x] Docker Compose configured (PostgreSQL 16 + Redis 7)
 - [ ] First migration applied
 - [ ] Auth endpoints verified end-to-end
@@ -109,6 +104,6 @@
 
 ## Blockers / Notes
 
-- **OpenAPI:** Switched from Swashbuckle to `Microsoft.AspNetCore.OpenApi` (built-in .NET 10). Doc served at `/openapi/v1.json` in dev. No Swagger UI — use Postman or add Scalar (`Scalar.AspNetCore`) if a browser UI is needed.
-- **First migration is the immediate blocker** — auth endpoints are fully coded but cannot run until `dotnet ef migrations add InitialCreate` and `dotnet ef database update` are run (requires Docker Compose up).
-- Desktop app shell is scaffolded but has zero real UI — all Blazor pages are stubs. UI work begins Day 2.
+- **Next step:** Run `dotnet ef migrations add InitialCreate` + `dotnet ef database update` (Docker Compose must be up first)
+- **OpenAPI:** Using .NET 10 built-in (`/openapi/v1.json` in dev) — no Swagger UI, use Postman
+- **Secrets:** JWT key is a placeholder in `appsettings.json`; real dev value lives in `appsettings.Development.json` (gitignored)
